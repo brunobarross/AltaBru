@@ -1,29 +1,33 @@
 <template>
-  <div>
-    <TheHeader />
-    <the-section text="SOBRE"></the-section>
-    <the-section text="HABILIDADES"></the-section>
+  <div class="">
+    <the-header ></the-header>
+    <the-banner></the-banner>
+    <the-section :section="section" text="SOBRE">
+      <template>
+        <the-sobre></the-sobre>
+      </template>
+    </the-section>
     <the-section text="PROJETOS">
       <template>
-        <div class="mt-16 grid grid-cols-1 gap-12">
-          <CardProject variation="par"/>
-          <CardProject variation="impar"/>
-
-        </div>
+        <the-projects></the-projects>
+      </template>
+    </the-section>
+    <the-section text="HABILIDADES">
+      <template>
+        <the-habilidades></the-habilidades>
       </template>
     </the-section>
     <the-section text="CONTATO"></the-section>
   </div>
 </template>
 
-<script>
-import CardProject from "../components/projects/CardProject.vue";
+<script setup>
+import { ref } from "vue";
 import TheHeader from "../components/UI/TheHeader.vue";
 import TheSection from "../components/UI/TheSection.vue";
+import TheProjects from "../components/projects/TheProjects.vue";
+import TheHabilidades from "../components/habilidades/TheHabilidades.vue";
+import TheSobre from "../components/sobre/TheSobre.vue";
+import TheBanner from "../components/UI/TheBanner.vue";
 
-
-export default {
-  name: "IndexPage",
-  components: { TheHeader, TheSection, CardProject },
-};
 </script>

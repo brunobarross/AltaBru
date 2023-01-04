@@ -9,7 +9,7 @@
 
 <style scoped>
   button{
-    border-color: #647bff;
-    color: #647bff;
+    border-color: #0192E4;
+    color: #0192E4;
   }
 </style>

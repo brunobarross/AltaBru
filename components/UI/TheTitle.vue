@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h2 class="text-8xl font-semibold text-center">{{ text }}</h2>
+      <h2 class="text-5xl lg:text-8xl font-semibold text-center">{{ text }}</h2>
     </div>
 </template>
 
@@ -12,7 +12,7 @@
 
 <style scoped>
   h2{
-    color: #222231;
+    color: rgba(134,160,220,0.41);
   }
 
 

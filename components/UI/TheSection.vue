@@ -1,11 +1,11 @@
 <template>
-    <div class="py-32">
+    <section class="pt-32" :id="text">
       <div class="container-personalizado">
         <TheTitle :text="text" />
         <slot></slot>
 
       </div>
-    </div>
+    </section>
 </template>
 
 

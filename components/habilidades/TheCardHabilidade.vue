@@ -1,0 +1,40 @@
+<template>
+  <div class="card-habilidade flex flex-col items-center justify-center transition-all lg:contrast-75 lg:hover:contrast-100 cursor-pointer">
+    <div class="img max-w-[56px] md:max-w-[80px]">
+      <img
+        :src="logo"
+        alt="" class="transition-all"
+      />
+    </div>
+    <div class="texto pt-4">
+      <h3 class="text-base md:text-lg tracking-tight">{{ nome_tecnologia }}</h3>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps(["logo_tecnologia", "nome_tecnologia"]);
+
+
+
+const logo = computed(() => {
+  return require(`~/assets/img/logos/${props.logo_tecnologia}`)
+})
+
+
+</script>
+
+<style scoped>
+
+
+
+
+.img img {
+  width: 5rem;
+  height: 5rem;
+
+
+}
+</style>
