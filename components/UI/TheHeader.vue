@@ -3,7 +3,7 @@
     <div class="container-personalizado">
       <div class="flex justify-between">
         <div class="logo">
-          <a href="#" class="text-lg font-semibold">Altamiro</a>
+          <a href="#" class="text-xl font-semibold">Altamiro</a>
         </div>
         <ul class="flex items-center">
           <li class="link-item text-base">Sobre</li>
@@ -17,14 +17,13 @@
 </template>
 
 <script setup>
-function goSection(val) {
-  $emit("go-section", val);
-}
+
 </script>
 
 <style scoped>
 header {
-  background-color: #182031;
+  background-color: #1D2224;
+  /* background-color: #182031; */
 }
 
 .logo a {

@@ -1,7 +1,7 @@
 <template>
-  <div class="mt-16 md:mt-20 grid grid-cols-1 gap-12 md:gap-16">
-    <card-project variation="par" />
-    <card-project variation="impar" />
+  <div class="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 ">
+    <card-project  />
+    <card-project />
   </div>
 </template>
 

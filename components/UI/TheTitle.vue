@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h2 class="text-5xl lg:text-8xl font-semibold text-center">{{ text }}</h2>
+      <h2 class="text-[2rem] md:text-[3.5rem] font-semibold text-center">{{ text }}</h2>
     </div>
 </template>
 

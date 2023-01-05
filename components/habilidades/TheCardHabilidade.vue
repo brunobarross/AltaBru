@@ -3,7 +3,7 @@
     <div class="img max-w-[56px] md:max-w-[80px]">
       <img
         :src="logo"
-        alt="" class="transition-all"
+        alt="" class="transition-all w-16 h-16 md:w-20 md:h-20 "
       />
     </div>
     <div class="texto pt-4">
@@ -28,13 +28,4 @@ const logo = computed(() => {
 
 <style scoped>
 
-
-
-
-.img img {
-  width: 5rem;
-  height: 5rem;
-
-
-}
 </style>
