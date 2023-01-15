@@ -1,10 +1,10 @@
 <template>
   <div class="grid grid-cols-3 lg:grid-cols-4 gap-8  justify-center mt-8 md:mt-12">
-    <the-card-habilidade
+    <TheCardHabilidade
       v-for="habilidade in habilidades"
       v-if="habilidades" :key="habilidade.id"
       :logo_tecnologia="habilidade.logo_tecnologia" :nome_tecnologia="habilidade.nome_tecnologia"
-    ></the-card-habilidade>
+    ></TheCardHabilidade>
   </div>
 </template>
 

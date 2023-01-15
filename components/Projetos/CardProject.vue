@@ -15,7 +15,8 @@
       </div>
 
       <div class="btn-container flex mt-6 justify-center">
-        <TheButton text="Ver mais" />
+        <nuxt-link to="/projetos/games4free"><TheButton text="Ver mais" /></nuxt-link>
+
       </div>
     </div>
   </div>
