@@ -9,20 +9,20 @@
           <div class="titulo mt-12">
             <span class="intro-tag block text-base font-medium text-center text-primary-pure">&lt; Hello World /&gt;</span>
             <h1 class="text-[2rem] md:text-[3rem] 2xl:text-[3.5rem]  font-semibold text-center">
-              Altamiro <span class="text-primary-pure">Bruno</span>
+              {{ typeValue }} <span class="text-primary-pure">Bruno</span>
             </h1>
             <p class="text-6 md:text-[1.5rem] 2xl:text-[1.5rem] font-medium mt-2 text-center">
               <span> Desenvolvedor </span> Frontend
             </p>
             <div class="flex justify-center mt-4">
-              <button class="border border-transparent rounded btn-cv py-2 px-4 min-w-[12.5rem] inline-flex items-center justify-center relative h-12 font-medium transition-all">
+              <a href="/altamiro-curriculo.pdf" download class="border border-transparent btn-cv py-2 px-4 min-w-[12.5rem] inline-flex items-center justify-center relative h-12 font-medium transition-all bg-primary-pure hover:bg-transparent hover:border-primary-pure">
                 Baixar CV
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-2" viewBox="0 0 512 512">
                   <title>Cloud Download</title>
                   <path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="var(--color1, #fff)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
                 </svg>
 
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -46,7 +46,51 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+const typeValue = ref('')
+const typeStatus = ref(false)
+const typeArray = ref(['Altamiro', 'Bruno'])
+const typingSpeed = ref(200)
+const erasingSpeed = ref(100)
+const newTextDelay = ref(2000)
+const typeArrayIndex = ref(0)
+const charIndex = ref(0)
+
+
+
+function typeText() {
+  if (charIndex.value < typeArray.value[typeArrayIndex.value].length) {
+    if (!typeStatus.value)
+      typeStatus.value = true;
+    typeValue.value += typeArray.value[typeArrayIndex.value].charAt(charIndex.value);
+    charIndex.value += 1;
+    setTimeout(typeText, typingSpeed.value);
+  }
+  else {
+    typeStatus.value = false;
+    setTimeout(eraseText, newTextDelay.value);
+  }
+}
+function eraseText() {
+  if (charIndex.value > 0) {
+    if (!typeStatus.value)
+      typeStatus.value = true;
+    typeValue.value = typeArray.value[typeArrayIndex.value].substring(0, charIndex.value - 1);
+    charIndex.value -= 1;
+    setTimeout(eraseText, erasingSpeed.value);
+  }
+  else {
+    typeStatus.value = false;
+    typeArrayIndex.value += 1;
+    if (typeArrayIndex.value >= typeArray.value.length)
+      typeArrayIndex.value = 0;
+    setTimeout(typeText, typingSpeed.value + 1000);
+  }
+}
+
+setTimeout(typeText, newTextDelay.value + 200);
+</script>
 
 <style scoped>
 .arrow img {
@@ -64,16 +108,12 @@
 
 
 .btn-cv {
-  border-color: #0192E4;
-  color: #0192E4;
-  --color1: #0192E4;
+  --color1: #fff;
+  border-radius: 2.25rem;
 }
 
 .btn-cv:hover {
-  background: #0192E4;
-  border-color: transparent;
-  color: #fff;
-  --color1: #fff;
+  --color1: #0192E4;
 
 
 }

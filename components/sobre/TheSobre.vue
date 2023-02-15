@@ -1,7 +1,7 @@
 <template>
   <div class="mt-8 md:mt-12">
 
-    <div class="col-2 text-center text-sm md:text-lg max-w-[800px] mx-auto">
+    <div class="col-2 text-justify text-sm md:text-lg max-w-[800px] mx-auto">
       <p>
         Olá, me chamo Altamiro, tenho 27 anos e sou do Rio de Janeiro.
         Atualmente estou cursando o primeiro período em <span>Análise e
