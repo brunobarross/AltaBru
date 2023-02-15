@@ -11,7 +11,8 @@ module.exports = {
     extend: {
       colors:{
         'neutral-black': '#111111',
-        'secondary-pure': '#101629'
+        'secondary-pure': '#101629',
+        'primary-pure': '#0192E4'
       }
     },
   },

@@ -8,4 +8,5 @@
 
 <script setup>
 import TheHeader from '../components/ui/TheHeader.vue';
+
 </script>

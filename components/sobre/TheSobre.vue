@@ -7,11 +7,11 @@
         Atualmente estou cursando o primeiro período em <span>Análise e
         Desenvolvimento</span> de Sistemas na Faculdade Descomplica.
       </p>
-      <p class="mt-4">
+      <p class="mt-2">
         Como um programador que é apaixonado pelo o que faz, gosto de aprender novas tecnologias e estar por dentro de todo o
         ecossistema <span>Frontend</span>.
       </p>
-      <p class="mt-4">Tenho como objetivo profissional desenvolver aplicações que poderão um dia impactar e facilitar a vida de outras pessoas</p>
+      <p class="mt-2">Tenho como objetivo profissional desenvolver aplicações que poderão um dia impactar e facilitar a vida de outras pessoas</p>
 
     </div>
   </div>
