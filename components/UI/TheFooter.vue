@@ -1,9 +1,9 @@
 <template>
-  <footer class="bg-neutral-700 py-4 mt-12">
+  <footer class="bg-neutral-700 py-4 mt-32">
     <div class="container-personalizado">
       <div class="flex justify-center">
         <div class="copy">
-          <p class="text-sm text-white font-medium">Orgulhosamente desenvolvido por Altamiro Bruno</p>
+          <p class="text-xs text-white font-medium">Orgulhosamente desenvolvido por Altamiro Bruno</p>
         </div>
       </div>
 

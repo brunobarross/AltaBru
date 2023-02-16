@@ -42,11 +42,6 @@ const links = ref([
     nome: 'Habilidades',
     anchor: '#habilidades',
     isActive: false,
-  },
-  {
-    nome: 'Contato',
-    anchor: '#contato',
-    isActive: false,
   }
 ])
 

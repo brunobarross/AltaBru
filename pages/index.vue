@@ -17,8 +17,6 @@
         <TheHabilidades></TheHabilidades>
       </template>
     </TheSection>
-    <TheSection text="CONTATO" id="contato"></TheSection>
-
 </div>
 </template>
 

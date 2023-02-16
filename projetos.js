@@ -27,7 +27,7 @@ export const projetos = [
     nome: 'Meu Portfolio',
     deploy: 'https://economizer-vue.vercel.app/',
     repositorio: 'https://github.com/brunobarross/economizer',
-    banner: require('~/assets/img/Economizer.png'),
+    banner: require('~/assets/img/portfolio.png'),
     miniatura: '',
     descricao: 'Com o intuito de me apresentar melhor, criei este portoflio trazendo algum dos projetos em que Desenvolvi e quais habilidades possuo. O projeto foi desenvolvido com o framework Nuxt.js, utilizando a Composition API do Vue.js, Vue Router para navegação entre páginas e TailwindCSS para estilização.',
     tecnologias: ['Nuxt.js', 'Javascript', 'Composition API', 'TailwindCSS', 'Vue Router', 'Nuxt Modules']
