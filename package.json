@@ -12,7 +12,9 @@
     "@nuxtjs/composition-api": "^0.33.1",
     "aos": "^2.3.4",
     "core-js": "^3.25.3",
+    "graphql-tag": "^2.12.6",
     "nuxt": "^2.15.8",
+    "nuxt-graphql-request": "^6.0.2",
     "vue": "^2.7.10",
     "vue-server-renderer": "^2.7.10",
     "vue-template-compiler": "^2.7.10"

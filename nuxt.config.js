@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'portfolio',
+    title: 'Altamiro Bruno | Desenvolvedor Front-end',
     htmlAttrs: {
       lang: 'en'
     },
@@ -48,9 +48,9 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/apollo'],
   apollo: {
-    clients: {
+    clientConfigs: {
       default: {
-        httpEndpoint: 'https://api.spacex.land/graphql'
+        httpEndpoint: 'https://api-sa-east-1.hygraph.com/v2/cl5y0mddm2bxo01t3d8a2drck/master'
       }
     },
   },

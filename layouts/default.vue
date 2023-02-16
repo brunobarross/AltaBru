@@ -1,12 +1,14 @@
 <template>
   <div>
-      <TheHeader />
+    <TheHeader />
       <Nuxt />
-  </div>
+    <TheFooter />
+</div>
 </template>
 
 
 <script setup>
+import TheFooter from '../components/UI/TheFooter.vue';
 import TheHeader from '../components/ui/TheHeader.vue';
 
 

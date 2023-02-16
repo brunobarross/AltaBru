@@ -2,7 +2,7 @@
   <div class="card-projeto overflow-hidden relative md:items-start h-[250px] md:h-[300px] border-2 rounded-md">
     <div class="img overflow-hidden rounded-md relative w-full h-full">
       <img
-        src="../../assets/img/games4free.png"
+        :src="projeto.banner"
         class="md:bg-cover h-full w-full"
       />
     </div>
@@ -10,12 +10,12 @@
       class="detail py-6 px-4 absolute top-0 left-0 flex flex-col justify-center  w-full h-full transition-all"
     >
       <div class="title flex flex-col text-center">
-        <h3 class=" text-2xl mt-2 font-semibold">Google Pesquisa</h3>
+        <h3 class=" text-2xl mt-2 font-semibold">{{ projeto.nome }}</h3>
 
       </div>
 
       <div class="btn-container flex mt-6 justify-center">
-        <nuxt-link to="/projetos/games4free"><TheButton text="Ver mais" /></nuxt-link>
+        <nuxt-link :to="projeto.slug"><TheButton text="Ver mais" /></nuxt-link>
 
       </div>
     </div>
@@ -23,7 +23,11 @@
 </template>
 
 <script setup>
+import {defineProps} from 'vue'
 import TheButton from "../UI/TheButton.vue";
+
+
+const props = defineProps(['projeto'])
 </script>
 
 <style scoped>

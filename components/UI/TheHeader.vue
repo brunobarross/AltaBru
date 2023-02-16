@@ -1,16 +1,20 @@
 <template>
-  <header class="py-6 h-16 fixed top-0 w-full flex items-center z-10">
+  <header class="py-6 lg:h-16 h-max fixed top-0 w-full flex items-center z-10">
     <div class="container-personalizado">
-      <div class="flex justify-between">
+      <div class="flex lg:flex-row flex-col items-center lg:justify-between">
         <div class="logo">
-          <a href="#" class="text-xl font-semibold">Altamiro</a>
+          <nuxt-link to="/" class="text-2xl lg:text-xl font-semibold">Altamiro<span class="text-white">.code</span></nuxt-link>
+
         </div>
-        <ul class="flex items-center">
-          <li class="link-item text-base transition-all" v-for="link in links" @click="(e)=> handleClick(e)">
+        <ul class="flex items-center lg:justify-start justify-center lg:mt-0 mt-8" v-if="route.name !== 'projetos-id'">
+          <li class="link-item text-base transition-all"  v-for="link in links" @click="(e)=> handleClick(e)">
             <a :href="link.anchor" :class="{isActive: link.isActive}">{{ link.nome }}</a>
           </li>
-
         </ul>
+        <ul class="flex items-center lg:justify-start justify-center lg:mt-0 mt-8" v-else>
+          <nuxt-link class="link-item text-base transition-all" to="/">Voltar para home</nuxt-link>
+        </ul>
+
       </div>
     </div>
   </header>
@@ -18,6 +22,10 @@
 
 <script setup>
 import { defineEmits, ref } from 'vue';
+import { useRoute } from '@nuxtjs/composition-api';
+const route = useRoute()
+
+console.log(route);
 
 const links = ref([
   {
