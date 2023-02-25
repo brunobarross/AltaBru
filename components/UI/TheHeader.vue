@@ -6,7 +6,7 @@
           <nuxt-link to="/" class="text-2xl lg:text-xl font-semibold">Altamiro<span class="text-white">.code</span></nuxt-link>
 
         </div>
-        <ul class="flex items-center lg:justify-start justify-center lg:mt-0 mt-8" v-if="route.name !== 'projetos-id'">
+        <ul class="flex items-center lg:justify-start justify-center lg:mt-0 mt-8" v-if="route.name !== 'projetos-slug'">
           <li class="link-item text-base transition-all"  v-for="link in links" @click="(e)=> handleClick(e)">
             <a :href="link.anchor" :class="{isActive: link.isActive}">{{ link.nome }}</a>
           </li>

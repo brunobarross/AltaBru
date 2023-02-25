@@ -2,7 +2,7 @@
   <div class="card-projeto overflow-hidden relative md:items-start h-[250px] md:h-[350px] border-2 rounded-md border-neutral-600 p-2">
     <div class="img overflow-hidden rounded-md relative w-full h-full">
       <img
-        :src="projeto.banner"
+        :src="projeto.banner.url"
         class="md:bg-cover h-full w-full"
       />
     </div>
@@ -31,7 +31,7 @@ import TheButton from "../UI/TheButton.vue";
 
 const props = defineProps(['projeto'])
 
-console.log(props.projeto);
+
 </script>
 
 <style scoped>

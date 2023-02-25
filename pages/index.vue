@@ -6,6 +6,11 @@
         <TheSobre></TheSobre>
       </template>
     </TheSection>
+    <TheSection text="Minhas Experiências Profissionais" id="experiencias">
+      <template>
+        <TheExperiencias/>
+      </template>
+    </TheSection>
     <TheSection text="Meus Projetos" id="projetos">
       <template>
         <TheProjects :projetos="projetos"/>
@@ -16,9 +21,7 @@
         <TheHabilidades></TheHabilidades>
       </template>
     </TheSection>
-    <pre>
-      {{ projetos }}
-    </pre>
+
 
 
   </div>
@@ -30,11 +33,12 @@ import TheProjects from "../components/projetos/TheProjects.vue";
 import TheHabilidades from "../components/Habilidades/TheHabilidades.vue";
 import TheSobre from "../components/sobre/TheSobre.vue";
 import TheBanner from "../components/UI/TheBanner.vue";
-import TheSection from "../components/UI/TheSection.vue";
+import TheSection from "../components/UI/TheSection.vue"
+import TheExperiencias from '../components/Experiencia/TheExperiencias.vue';
 
 
 const PROJECTS_QUERY = gql`
-query MyQuery {
+query PROJECTS_QUERY {
   projetos {
     id
     nome
@@ -44,6 +48,7 @@ query MyQuery {
     video
     slug
     banner{
+      url
       fileName
     }
     tecnologias{
@@ -61,7 +66,8 @@ export default {
     TheBanner,
     TheHabilidades,
     TheSection,
-    TheSobre
+    TheSobre,
+    TheExperiencias
   },
   async asyncData({ app, params }) {
     const client = app.apolloProvider.defaultClient;

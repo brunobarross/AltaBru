@@ -1,18 +1,19 @@
 <template>
-  <div class="relative">
+  <div class="relative" :key="projeto.id">
     <section class=" w-full mt-16 relative h-96 z-[1]">
-      <img :src="projeto.banner" class="absolute inset-0 object-cover object-top h-full w-full opacity-40" />
+      <img :src="projeto.banner.url" class="absolute inset-0 object-cover object-top h-full w-full opacity-40" />
     </section>
     <section class="w-full relative -mt-20 z-10">
       <div class="container-personalizado">
         <div class="flex lg:justify-between lg:items-end lg:flex-row flex-col items-center">
           <div class="flex items-center md:flex-row flex-col" >
             <div class="profile w-[15rem] h-[15rem] border border-primary-pure p-2 rounded-md overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
-              <!-- <h1 class="text-2xl font-semibold md:text-left text-center">{{ projeto.nome }}</h1> -->
-              <img :src="projeto.banner" class="object-cover object-center h-full w-full " />
+
+              <img :src="projeto.miniatura.url" class="object-cover object-center h-full w-full " />
             </div>
             <div class="titulo mt-4 ml-0 md:ml-4 lg:mt-0" data-aos="fade-left" data-aos-delay="150">
               <h3 class="font-semibold">{{ projeto.nome }}</h3>
+              <p class="font-medium text-primary-pure">{{ projeto.tipo }}</p>
             </div>
 
           </div>
@@ -49,7 +50,7 @@
           <div class="tecnologias mt-8">
             <TheTitle text="Tecnologias" :inverse="false" />
             <ul class="mt-4" data-aos="fade-left" data-aos-delay="200">
-              <li class="text-sm md:text-base" v-for="tecnologia in projeto.tecnologias" :key="tecnologia" >- {{ tecnologia }}</li>
+              <li class="text-sm md:text-base" v-for="tecnologia in projeto.tecnologias" :key="tecnologia.id" >- {{ tecnologia.nome }}</li>
             </ul>
 
           </div>
@@ -71,39 +72,64 @@
     </section>
   </div>
 </template>
+
 <script>
-export default {
-  name: "Projeto",
-  inheritAttrs: false,
-  customOptions: {},
-  components: { TheTitle }
-}
-</script>
-
-<script setup>
-import { ref } from 'vue'
-import { computed, defineComponent, inject, useRoute, onMounted } from '@nuxtjs/composition-api'
-import { projetos } from '../../projetos.js'
+import gql from 'graphql-tag';
 import TheTitle from '../../components/UI/TheTitle.vue';
+const SINGLE_PROJECT_QUERY = gql`
+query SINGLE_PROJECT_QUERY ($slug: String) {
+  projeto(where: { slug: $slug }) {
+    id
+    nome
+    descricao
+    repositorio
+    deploy
+    video
+    slug
+    tipo
+    banner{
+      url
+      fileName
+    }
+    miniatura{
+      url
+      fileName
+    }
+    tecnologias{
+      id
+      nome
+    }
 
-const route = useRoute()
-const projeto = ref({})
+  }
+}
+`
 
+export default {
+  components:{
+   TheTitle
+  },
+  async asyncData({ app, params }) {
+    const client = app.apolloProvider.defaultClient;
+    const { slug } = params;
+    const res = await client.query({
+      query: SINGLE_PROJECT_QUERY,
+      variables:{
+        slug,
+      }
+    })
+    console.log(res.data)
+    const { projeto} = await res.data;
+    console.log(projeto)
 
-
-
-
-onMounted(() => {
-  console.log(route.value.params.id)
-  const filtro = projetos.filter(i => i.id == route.value.params.id)
-  projeto.value = filtro[0]
-})
+    return {
+      projeto,
+    }
+  },
+}
 
 
 
 </script>
-
-
 <style scoped>
 .tag {
   display: grid;

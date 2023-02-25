@@ -63,4 +63,8 @@
   .btn.secondary {
     @apply text-neutral-200 hover:bg-primary-pure bg-transparent border-primary-pure hover:border-primary-pure;
   }
+
+  .active{
+    @apply bg-primary-pure text-neutral-200;
+  }
 }
