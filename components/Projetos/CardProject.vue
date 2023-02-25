@@ -25,13 +25,13 @@
 </template>
 
 <script setup>
-import {defineProps} from 'vue'
-import TheButton from "../ui/TheButton.vue";
+
+import TheButton from "@components/Ui/TheButton.vue";
 
 
 const props = defineProps(['projeto'])
 
-
+console.log('oi')
 </script>
 
 <style scoped>
