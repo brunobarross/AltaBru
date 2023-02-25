@@ -30,7 +30,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/css/tailwind.css'
+  '@/assets/css/tailwind.css'
   ],
 
   plugins: [
@@ -65,7 +65,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    transpile: ['vue-agile'],
     postcss: {
       plugins: {
         tailwindcss: {},

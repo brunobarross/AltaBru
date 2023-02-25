@@ -8,7 +8,7 @@
     </TheSection>
     <TheSection text="Meus Projetos" id="projetos">
       <template>
-        <TheProjects></TheProjects>
+        <TheProjects :projetos="projetos"/>
       </template>
     </TheSection>
     <TheSection text="Minhas Habilidades" id="habilidades">
@@ -16,47 +16,69 @@
         <TheHabilidades></TheHabilidades>
       </template>
     </TheSection>
+    <pre>
+      {{ projetos }}
+    </pre>
 
-</div>
+
+  </div>
 </template>
 
 <script>
-import gql from 'graphql-tag'
+import gql from 'graphql-tag';
 import TheProjects from "../components/projetos/TheProjects.vue";
 import TheHabilidades from "../components/Habilidades/TheHabilidades.vue";
 import TheSobre from "../components/sobre/TheSobre.vue";
 import TheBanner from "../components/UI/TheBanner.vue";
 import TheSection from "../components/UI/TheSection.vue";
 
-export default {
-  components: {
-    TheProjects,
-    TheHabilidades,
-    TheSobre,
-    TheBanner,
-    TheSection
-  },
-  apollo: {
-    projetos: gql`
-    query MyQuery {
-      projetos {
-        id
-        nome
-        slug
-        descricao
-        deploy
-        repositorio
-        banner {
-          bannerProjeto {
-            id
-          }
-        }
-      }
+
+const PROJECTS_QUERY = gql`
+query MyQuery {
+  projetos {
+    id
+    nome
+    descricao
+    repositorio
+    deploy
+    video
+    slug
+    banner{
+      fileName
+    }
+    tecnologias{
+      id
+      nome
     }
 
-    `
   }
 }
+`
+
+export default {
+  components:{
+    TheProjects,
+    TheBanner,
+    TheHabilidades,
+    TheSection,
+    TheSobre
+  },
+  async asyncData({ app, params }) {
+    const client = app.apolloProvider.defaultClient;
+
+    const res = await client.query({
+      query: PROJECTS_QUERY,
+    })
+
+    const { projetos} = await res.data;
+    console.log(projetos)
+
+    return {
+      projetos,
+    }
+  },
+}
+
 
 
 </script>

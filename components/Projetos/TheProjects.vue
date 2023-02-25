@@ -8,12 +8,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { VueAgile } from 'vue-agile'
+import { ref, defineProps } from 'vue'
 import CardProject from "./CardProject.vue";
-import { projetos } from '@/projetos.js'
+// import { projetos } from '@/projetos.js'
+
+const props = defineProps(['projetos'])
 
 
+console.log(props.projetos)
 
 
 </script>

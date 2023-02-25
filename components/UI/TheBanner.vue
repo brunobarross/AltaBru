@@ -3,7 +3,7 @@
     <div class="container-personalizado h-full">
       <div class="flex h-full relative lg:items-center md:justify-center flex-col">
         <div class="banner-wrapper w-full h-full flex flex-col  justify-center">
-          <div class="mt-12">
+          <div class="mt-12 mr-10">
             <!-- <span class="intro-tag block text-base font-medium  text-primary-pure">&lt; Hello World /&gt;</span> -->
             <span class="intro-tag block text-lg font-medium  text-primary-pure mb-6" data-aos="fade-up" data-aos-delay="100">Olá, eu sou o</span>
             <h1 class="titulo font-semibold text-neutral-100" data-aos="fade-up" data-aos-delay="150">

@@ -15,11 +15,13 @@
       </div>
 
       <div class="btn-container flex mt-6 justify-center">
-        <nuxt-link :to="projeto.slug"><TheButton text="Ver mais" /></nuxt-link>
+        <nuxt-link :to="`projetos/${projeto.slug}`"><TheButton text="Ver mais" /></nuxt-link>
 
       </div>
+
     </div>
   </div>
+
 </template>
 
 <script setup>
@@ -28,6 +30,8 @@ import TheButton from "../UI/TheButton.vue";
 
 
 const props = defineProps(['projeto'])
+
+console.log(props.projeto);
 </script>
 
 <style scoped>
