@@ -1,19 +1,22 @@
 <template>
   <header class="py-6 lg:h-16 h-max fixed top-0 w-full flex items-center z-10">
     <div class="container-personalizado">
-      <div class="flex lg:flex-row flex-col items-center lg:justify-between">
+      <div class="flex flex-col md:flex-row items-center lg:justify-between">
         <div class="logo">
           <nuxt-link to="/" class="text-2xl lg:text-xl font-semibold">Altamiro<span class="text-white">.code</span></nuxt-link>
 
         </div>
-        <ul class="flex items-center lg:justify-start justify-center lg:mt-0 mt-8" v-if="route.name !== 'projetos-slug'">
+        <div class=" ">
+          <ul class="flex  items-center lg:justify-start justify-center lg:mt-0 mt-8" v-if="route.name !== 'projetos-slug'">
           <li class="link-item text-base transition-all"  v-for="link in links" @click="(e)=> handleClick(e)">
             <a :href="link.anchor" :class="{isActive: link.isActive}">{{ link.nome }}</a>
           </li>
         </ul>
-        <ul class="flex items-center lg:justify-start justify-center lg:mt-0 mt-8" v-else>
+        <ul class="flex md:flex-row flex-col items-center lg:justify-start justify-center lg:mt-0 mt-8" v-else>
           <nuxt-link class="link-item text-base transition-all" to="/">Voltar para home</nuxt-link>
         </ul>
+        </div>
+
 
       </div>
     </div>
@@ -78,10 +81,28 @@ header {
   cursor: pointer;
 }
 
-.link-item+.link-item {
+
+  .link-item+.link-item {
   margin-left: 1rem;
 }
 
+
+
+.menu{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul{
+  height: 100%;
+}
 /* .isActive{
   color: #0192E4;
 } */

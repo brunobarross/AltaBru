@@ -6,11 +6,11 @@
         <TheSobre></TheSobre>
       </template>
     </TheSection>
-    <TheSection text="Minhas Experiências Profissionais" id="experiencias">
+    <!-- <TheSection text="Minhas Experiências Profissionais" id="experiencias">
       <template>
         <TheExperiencias/>
       </template>
-    </TheSection>
+    </TheSection> -->
     <TheSection text="Meus Projetos" id="projetos">
       <template>
         <TheProjects :projetos="projetos"/>
