@@ -31,7 +31,7 @@ import TheButton from "@components/Ui/TheButton.vue";
 
 const props = defineProps(['projeto'])
 
-console.log('oi')
+console.log('')
 </script>
 
 <style scoped>
