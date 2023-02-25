@@ -26,7 +26,7 @@
 
 <script setup>
 
-import TheButton from "@components/Ui/TheButton.vue";
+import TheButton from "~/components/Ui/TheButton.vue";
 
 
 const props = defineProps(['projeto'])
