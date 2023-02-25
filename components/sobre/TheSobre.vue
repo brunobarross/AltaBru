@@ -1,6 +1,6 @@
 <template>
   <div class="mt-8 md:mt-12 flex flex-col md:grid grid-sobre md:items center items-start gap-8">
-    <div class="col-1 text-sm md:text-lg text-neutral-300 ">
+    <div class="col-1 text-sm md:text-lg text-neutral-300 " data-aos="fade-up" data-aos-delay="150">
       <p>
         Meu nome é Altamiro Bruno, tenho 27 anos, sou estudante do primeiro período em Análise e Desenvolvimento de Sitemas e atuo na área de desenvolvimento a mais de 3 anos.
       </p>
@@ -12,7 +12,7 @@
       </p>
 
     </div>
-    <div class="col-2 mx-auto lg:mx-0">
+    <div class="col-2 mx-auto lg:mx-0" data-aos="fade-left" data-aos-delay="250">
       <div class="image-container ">
         <img src="~/assets/img/altamiro.jpg" class="rounded-md w-full h-[350px] object-cover object-top" />
       </div>

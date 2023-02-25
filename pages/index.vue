@@ -16,6 +16,7 @@
         <TheHabilidades></TheHabilidades>
       </template>
     </TheSection>
+
 </div>
 </template>
 
