@@ -30,11 +30,11 @@
 <script>
 import gql from 'graphql-tag';
 import TheProjects from "../components/projetos/TheProjects.vue";
-import TheHabilidades from "../components/Habilidades/TheHabilidades.vue";
+import TheHabilidades from "../components/habilidades/TheHabilidades.vue";
 import TheSobre from "../components/sobre/TheSobre.vue";
-import TheBanner from "../components/UI/TheBanner.vue";
-import TheSection from "../components/UI/TheSection.vue"
-import TheExperiencias from '../components/Experiencia/TheExperiencias.vue';
+import TheBanner from "../components/ui/TheBanner.vue";
+import TheSection from "../components/ui/TheSection.vue"
+import TheExperiencias from '../components/experiencia/TheExperiencias.vue';
 
 
 const PROJECTS_QUERY = gql`

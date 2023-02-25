@@ -75,7 +75,7 @@
 
 <script>
 import gql from 'graphql-tag';
-import TheTitle from '../../components/UI/TheTitle.vue';
+import TheTitle from '../../components/ui/TheTitle.vue';
 const SINGLE_PROJECT_QUERY = gql`
 query SINGLE_PROJECT_QUERY ($slug: String) {
   projeto(where: { slug: $slug }) {

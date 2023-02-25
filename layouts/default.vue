@@ -8,7 +8,7 @@
 
 
 <script setup>
-import TheFooter from '../components/UI/TheFooter.vue';
+import TheFooter from '../components/ui/TheFooter.vue';
 import TheHeader from '../components/ui/TheHeader.vue';
 
 
