@@ -1,48 +1,81 @@
 <template>
-  <div class="mt-8 md:mt-12">
-
-    <div class="col-2 text-sm md:text-lg max-w-[800px] mx-auto text-center">
+  <div class="mt-8 md:mt-12 flex flex-col md:grid grid-sobre md:items center items-start gap-8">
+    <div class="col-1 text-sm md:text-lg text-neutral-300 ">
       <p>
-        Olá, me chamo Altamiro, tenho 27 anos e sou do Rio de Janeiro.
-        Atualmente estou cursando o primeiro período em <span>Análise e
-          Desenvolvimento</span> de Sistemas na Faculdade Descomplica.
+        Meu nome é Altamiro Bruno, tenho 27 anos, sou estudante do primeiro período em Análise e Desenvolvimento de Sitemas e atuo na área de desenvolvimento a mais de 3 anos.
       </p>
       <p class="mt-2">
-        Como um programador que é apaixonado pelo o que faz, gosto de aprender novas tecnologias e estar por dentro de todo o
-        ecossistema <span>Frontend</span>.
+        Como um desenvolvedor frontend, meu objetivo é criar experiências digitais envolventes e fáceis de usar para os usuários. Para alcançar esse objetivo, utilizo uma variedade de habilidades e ferramentas, incluindo HTML, CSS, JavaScript e frameworks como Vue e React.
       </p>
-      <p class="mt-2">Tenho como objetivo profissional desenvolver aplicações que poderão um dia impactar e facilitar a vida de outras pessoas</p>
-
-      <div class="mt-8">
-        <a href="/altamiro-curriculo.pdf" download class="border border-transparent btn-cv py-2 px-4 min-w-[12.5rem] inline-flex items-center justify-center relative h-12 font-medium transition-all bg-primary-pure hover:bg-transparent hover:border-primary-pure">
-          Baixar CV
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 m-2" viewBox="0 0 512 512">
-            <title>Cloud Download</title>
-            <path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="var(--color1, #fff)" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" />
-          </svg>
-
-        </a>
-      </div>
+      <p class="mt-2">
+        Por fim, sou comprometido em manter-me atualizado com as últimas tendências em design e desenvolvimento frontend, e continuo a aprimorar minhas habilidades para entregar produtos de alta qualidade. Estou ansioso para trabalhar em novos projetos emocionantes e contribuir para o sucesso de sua empresa.
+      </p>
 
     </div>
+    <div class="col-2 mx-auto lg:mx-0">
+      <div class="image-container ">
+        <img src="~/assets/img/altamiro.jpg" class="rounded-md w-full h-[350px] object-cover object-top" />
+      </div>
+    </div>
 
-</div>
+
+
+  </div>
 </template>
 
 
 <style scoped>
+
+
+@media(min-width: 1024px){
+ .grid-sobre {
+  grid-template-columns: 1fr .5fr;
+}
+}
+
 p>span {
   color: #0192E4;
 }
 
-.btn-cv {
-  --color1: #fff;
-  border-radius: 2.25rem;
+.image-container {
+  position: relative;
 }
 
-.btn-cv:hover {
-  --color1: #0192E4;
-
+.image-container::before {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #0192E4;
+  mix-blend-mode: soft-light;
+  transition: .3s ease;
 
 }
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #0192E4;
+  top: 20px;
+  left: 20px;
+  z-index: -1;
+  border-radius: 6px;
+  transition: .3s ease;
+}
+
+.image-container:hover::before{
+  opacity: 0;
+
+}
+.image-container:hover::after{
+  top: 15px;
+  left: 15px;
+
+}
+
+
 </style>

@@ -1,18 +1,17 @@
 <template>
   <div class="">
     <the-banner></the-banner>
-
-    <TheSection text="SOBRE MIM" id="sobre">
+    <TheSection text="Sobre mim" id="sobre">
       <template>
         <TheSobre></TheSobre>
       </template>
     </TheSection>
-    <TheSection text="PROJETOS" id="projetos">
+    <TheSection text="Meus Projetos" id="projetos">
       <template>
         <TheProjects></TheProjects>
       </template>
     </TheSection>
-    <TheSection text="HABILIDADES" id="habilidades">
+    <TheSection text="Minhas Habilidades" id="habilidades">
       <template>
         <TheHabilidades></TheHabilidades>
       </template>

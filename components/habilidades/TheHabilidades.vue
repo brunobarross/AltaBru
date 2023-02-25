@@ -1,10 +1,6 @@
 <template>
-  <div class="grid grid-cols-3 lg:grid-cols-4 gap-8  justify-center mt-8 md:mt-12">
-    <TheCardHabilidade
-      v-for="habilidade in habilidades"
-      v-if="habilidades" :key="habilidade.id"
-      :logo_tecnologia="habilidade.logo_tecnologia" :nome_tecnologia="habilidade.nome_tecnologia"
-    ></TheCardHabilidade>
+  <div class="grid  grid-habilidades mt-8 md:mt-12">
+    <TheCardHabilidade v-for="habilidade in habilidades" v-if="habilidades" :key="habilidade.id" :logo_tecnologia="habilidade.logo_tecnologia" :nome_tecnologia="habilidade.nome_tecnologia"></TheCardHabilidade>
   </div>
 </template>
 
@@ -24,52 +20,70 @@ const habilidades = [
     logo_tecnologia: "quasar.png",
   },
   {
-    id: 1,
+    id: 2,
     nome_tecnologia: "Nuxt.js",
     logo_tecnologia: "nuxt.png",
   },
   {
-    id: 2,
+    id: 3,
     nome_tecnologia: "React.js",
     logo_tecnologia: "react.svg",
   },
   {
-    id: 3,
+    id: 4,
     nome_tecnologia: "Javascript",
     logo_tecnologia: "javascript.svg",
   },
 
   {
-    id: 4,
+    id: 5,
     nome_tecnologia: "HTML5",
     logo_tecnologia: "html5.svg",
   },
   {
-    id: 5,
+    id: 6,
     nome_tecnologia: "CSS3",
     logo_tecnologia: "css3.svg",
   },
   {
-    id: 6,
+    id: 7,
     nome_tecnologia: "TailwindCSS",
     logo_tecnologia: "tailwind.svg",
   },
   {
-    id: 7,
+    id: 8,
     nome_tecnologia: "Bootstrap",
     logo_tecnologia: "bootstrap.svg",
   },
 
   {
-    id: 8,
+    id: 9,
     nome_tecnologia: "Figma",
     logo_tecnologia: "figma.svg",
   },
 
   {
-    id: 9,
+    id: 10,
     nome_tecnologia: "Git",
     logo_tecnologia: "git.svg",
   },
 ];
 </script>
+
+<style scoped>
+.grid-habilidades {
+  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+  column-gap: 2rem;
+  row-gap: 4rem;
+}
+
+@media(max-width: 640px) {
+  .grid-habilidades {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+
+  }
+
+}
+</style>

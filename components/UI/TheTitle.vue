@@ -1,5 +1,5 @@
 <template>
-    <h2 class="text-[2rem] md:text-[2.5rem] font-semibold" :class="{ inverse: inverse }">{{ text }}</h2>
+    <h2 class="text-[2rem] md:text-[2.5rem] font-semibold text-neutral-100" :class="{ inverse: inverse }">{{ text }}</h2>
 </template>
 
 <script setup>
@@ -9,12 +9,21 @@ const props = defineProps(['text', 'inverse'])
 
 
 <style scoped>
-h2 {
-  color: rgba(134, 160, 220, 0.41);
-  text-align: center;
+
+h2{
+  font-size: clamp(1.5rem,4vw,2rem);
 }
 
+h2::after{
+  content: "";
+  display: block;
+  width: 64px;
+  height: 5px;
+  background-color:#0192E4;
+  border-radius: 6px;
+  margin-top: .25rem;
+}
 h2.inverse{
-  text-align: left !important;
+  text-align: center !important;
 }
 </style>

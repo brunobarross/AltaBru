@@ -1,5 +1,5 @@
 <template>
-    <section class="pt-20 md:pt-32" :id="text" :ref="secao">
+    <section class="pt-40" :id="text" :ref="secao">
       <div class="container-personalizado" >
         <div :class="{isInverse: inverse }">
           <TheTitle :text="text" />
@@ -17,9 +17,6 @@ const props = defineProps(['text', 'inverse', 'secao'])
 
 
 
-onMounted(()=>{
-  console.log(props.secao)
-})
 
 
 </script>

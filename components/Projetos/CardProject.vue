@@ -1,5 +1,5 @@
 <template>
-  <div class="card-projeto overflow-hidden relative md:items-start h-[250px] md:h-[300px] border-2 rounded-md">
+  <div class="card-projeto overflow-hidden relative md:items-start h-[250px] md:h-[300px] border-2 rounded-md border-neutral-600 p-2">
     <div class="img overflow-hidden rounded-md relative w-full h-full">
       <img
         :src="projeto.banner"
@@ -36,24 +36,24 @@ const props = defineProps(['projeto'])
     opacity: 0;
   }
 
-  .card-projeto{
-    border-color:  rgba(134,160,220,0.41);
-    padding: 1rem;
-  }
+
 
   .card-projeto .img::after {
     content: "";
-    background: rgb(27,56,116, 0.2);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     transition: 0.3s ease;
+
   }
 
   .card-projeto:hover .img::after {
-    background: rgb(27,56,116, 0.9);
+    background:  #0192E4;
+    opacity: 0.7;
+
+
   }
   .card-projeto:hover .detail {
     opacity: 1;

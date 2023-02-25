@@ -2,24 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   html {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
   }
 
-  body{
-    background-color: #1D2224;
-    color: #fff;
+  body {
+    @apply text-neutral-200;
+    background-color: #1d2224;
   }
 }
 
 @layer components {
-  .container-personalizado{
-    max-width: 1200px;
+  .container-personalizado {
     margin: 0 auto;
-    width: 100%;
     padding: 0 1.5rem;
+    width: 100%;
+    position: relative;
+  }
+      @media (min-width: 576px) {
+      .container-personalizado{
+        max-width: 540px;
+      }
+
+    }
+
+    @media (min-width: 768px) {
+      .container-personalizado{
+        max-width: 720px;
+      }
+    }
+
+    @media(min-width: 1024px) {
+      .container-personalizado{
+        max-width: 900px;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      .container-personalizado{
+        max-width: 1150px;
+      }
+    }
+
+    @media (min-width: 1536px) {
+      .container-personalizado{
+        max-width: 1400px
+      }
+    }
+
+  .btn {
+    @apply border border-transparent py-2 px-4 min-w-[12.5rem] inline-flex items-center justify-center relative h-12 font-medium transition-all rounded-md;
+  }
+
+  .btn.primary {
+    @apply text-neutral-200 bg-primary-pure hover:bg-transparent hover:border-primary-pure;
   }
 }
