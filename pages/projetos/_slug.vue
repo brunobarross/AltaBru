@@ -75,7 +75,6 @@
 
 <script>
 import gql from 'graphql-tag';
-import TheTitle from '~/components/Ui/TheTitle.vue';
 const SINGLE_PROJECT_QUERY = gql`
 query SINGLE_PROJECT_QUERY ($slug: String) {
   projeto(where: { slug: $slug }) {
@@ -105,9 +104,7 @@ query SINGLE_PROJECT_QUERY ($slug: String) {
 `
 
 export default {
-  components:{
-   TheTitle
-  },
+
   async asyncData({ app, params }) {
     const client = app.apolloProvider.defaultClient;
     const { slug } = params;
