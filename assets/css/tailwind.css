@@ -55,7 +55,7 @@
     }
 
   .btn {
-    @apply border border-transparent py-2 px-4 min-w-[12.5rem] inline-flex items-center justify-center relative h-12 font-medium transition-all rounded-md;
+    @apply border border-transparent py-2 px-4 min-w-[12.5rem] inline-flex items-center justify-center relative h-12 font-medium transition-all rounded-md text-base;
   }
 
   .btn.primary {
