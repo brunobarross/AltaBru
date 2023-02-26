@@ -5,7 +5,7 @@ export default ({ app }) => {
   app.AOS = new AOS.init({
     disable: window.innerWidth < 640,
     // offset: 200,
-    duration: 600,
+    duration: 800,
     easing: 'ease-in-out-cubic',
     once: true
   }); // or any other options you need
