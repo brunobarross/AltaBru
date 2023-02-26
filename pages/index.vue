@@ -29,13 +29,6 @@
 
 <script>
 import gql from 'graphql-tag';
-import TheProjects from "~/components/Projetos/TheProjects.vue";
-import TheHabilidades from "~/components/Habilidades/TheHabilidades.vue";
-import TheSobre from "~/components/Sobre/TheSobre.vue";
-import TheBanner from "~/components/Ui/TheBanner.vue";
-import TheSection from "~/components/Ui/TheSection.vue"
-import TheExperiencias from '~/components/Experiencia/TheExperiencias.vue';
-
 
 const PROJECTS_QUERY = gql`
 query PROJECTS_QUERY {
@@ -61,14 +54,7 @@ query PROJECTS_QUERY {
 `
 
 export default {
-  components:{
-    TheProjects,
-    TheBanner,
-    TheHabilidades,
-    TheSection,
-    TheSobre,
-    TheExperiencias
-  },
+
   async asyncData({ app, params }) {
     const client = app.apolloProvider.defaultClient;
 

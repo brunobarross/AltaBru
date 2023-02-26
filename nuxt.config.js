@@ -59,7 +59,26 @@ export default {
 
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    {
+      path:'~/components/Experiencia/', extensions :['vue']
+    },
+    {
+      path:'~/components/Habilidades/', extensions :['vue']
+    },
+    {
+      path:'~/components/Projetos/', extensions :['vue']
+    },
+    {
+      path:'~/components/Sobre/', extensions :['vue']
+    },
+    {
+      path:'~/components/Ui/', extensions :['vue']
+    },
+
+
+
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
