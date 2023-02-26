@@ -24,7 +24,7 @@
 </template>
 
 <script setup>
-import { defineEmits, ref } from 'vue';
+import { ref } from 'vue';
 import { useRoute } from '@nuxtjs/composition-api';
 const route = useRoute()
 

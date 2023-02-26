@@ -12,7 +12,6 @@
 
 <script setup>
 import {ref, onMounted} from 'vue'
-import TheTitle from './TheTitle.vue';
 const props = defineProps(['text', 'inverse', 'secao'])
 
 

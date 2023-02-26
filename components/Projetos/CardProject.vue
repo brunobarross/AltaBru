@@ -25,13 +25,7 @@
 </template>
 
 <script setup>
-
-import TheButton from "~/components/Ui/TheButton.vue";
-
-
 const props = defineProps(['projeto'])
-
-console.log('')
 </script>
 
 <style scoped>
