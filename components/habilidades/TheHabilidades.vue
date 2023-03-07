@@ -16,14 +16,15 @@ const habilidades = [
   },
   {
     id: 1,
-    nome_tecnologia: "Quasar",
-    logo_tecnologia: "quasar.png",
-  },
-  {
-    id: 2,
     nome_tecnologia: "Nuxt.js",
     logo_tecnologia: "nuxt.png",
   },
+  {
+    id: 2,
+    nome_tecnologia: "Quasar",
+    logo_tecnologia: "quasar.png",
+  },
+
   {
     id: 3,
     nome_tecnologia: "React.js",
@@ -31,42 +32,52 @@ const habilidades = [
   },
   {
     id: 4,
+    nome_tecnologia: "GraphQL",
+    logo_tecnologia: "graphql.svg",
+  },
+  {
+    id: 5,
+    nome_tecnologia: "Wordpress CMS",
+    logo_tecnologia: "wordpress.svg",
+  },
+  {
+    id: 6,
     nome_tecnologia: "Javascript",
     logo_tecnologia: "javascript.svg",
   },
 
   {
-    id: 5,
+    id: 7,
     nome_tecnologia: "HTML5",
     logo_tecnologia: "html5.svg",
   },
   {
-    id: 6,
+    id:8,
     nome_tecnologia: "CSS3",
     logo_tecnologia: "css3.svg",
   },
   {
-    id: 7,
+    id: 9,
     nome_tecnologia: "TailwindCSS",
     logo_tecnologia: "tailwind.svg",
   },
   {
-    id: 8,
+    id: 10,
     nome_tecnologia: "Bootstrap",
     logo_tecnologia: "bootstrap.svg",
   },
 
   {
-    id: 9,
+    id: 11,
     nome_tecnologia: "Figma",
     logo_tecnologia: "figma.svg",
   },
 
   {
-    id: 10,
+    id: 12,
     nome_tecnologia: "Git",
     logo_tecnologia: "git.svg",
-  },
+  }
 ];
 </script>
 

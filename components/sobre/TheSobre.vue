@@ -2,10 +2,10 @@
   <div class="mt-8 md:mt-12 flex flex-col md:grid grid-sobre md:items center items-start gap-8">
     <div class="col-1 text-sm md:text-lg text-neutral-300 " data-aos="fade-up" data-aos-delay="150">
       <p>
-        Meu nome é Altamiro Bruno, tenho 27 anos, sou estudante do primeiro período em Análise e Desenvolvimento de Sitemas e atuo na área de desenvolvimento a mais de 3 anos.
+        Meu nome é Altamiro Bruno, tenho 27 anos, atuo na área de desenvolvimento a mais de 3 anos e curso a faculdade de Análise e Desenvolvimento de Sistemas.
       </p>
       <p class="mt-2">
-        Como um desenvolvedor frontend, meu objetivo é criar experiências digitais envolventes e fáceis de usar para os usuários. Para alcançar esse objetivo, utilizo uma variedade de habilidades e ferramentas, incluindo HTML, CSS, JavaScript e frameworks como Vue e React.
+        Como um desenvolvedor frontend, meu objetivo é criar experiências digitais envolventes e fáceis de usar para os usuários. Para alcançar esse objetivo, utilizo uma variedade de habilidades e ferramentas, incluindo HTML, CSS, JavaScript e frameworks como Vue,Nuxt.js, Quasar e React.js.
       </p>
       <p class="mt-2">
         Por fim, sou comprometido em manter-me atualizado com as últimas tendências em design e desenvolvimento frontend, e continuo a aprimorar minhas habilidades para entregar produtos de alta qualidade. Estou ansioso para trabalhar em novos projetos emocionantes e contribuir para o sucesso de sua empresa.
