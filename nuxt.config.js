@@ -16,10 +16,10 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Desenvolvimento de sites frontend com qualidade e excelência. HTML, CSS, JavaScript, Vue.js e React são algumas das tecnologias que utilizo para criar soluções digitais atraentes e funcionais para meus clientes. Descubra como posso ajudá-lo a melhorar a presença online da sua empresa.' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
