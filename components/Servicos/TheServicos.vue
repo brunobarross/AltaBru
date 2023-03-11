@@ -1,6 +1,6 @@
 <template>
   <div class="mt-8 md:mt-12">
-    <div class="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" >
+    <div class="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6" >
       <CardServicos v-for="servico in servicos" v-if="servicos.length" :key="servico.id" :servico="servico" :icone_servicos="servico.icon" data-aos="zoom-in" data-aos-delay="200" />
 
     </div>
