@@ -37,14 +37,7 @@
 
 <script>
 import gql from 'graphql-tag';
-import TheProjects from "../components/projetos/TheProjects.vue";
-import TheHabilidades from "../components/Habilidades/TheHabilidades.vue";
-import TheSobre from "../components/sobre/TheSobre.vue";
-import TheBanner from "../components/UI/TheBanner.vue";
-import TheSection from "../components/UI/TheSection.vue"
-import TheExperiencias from '../components/Experiencia/TheExperiencias.vue';
-import TheContato from '../components/Contato/TheContato.vue';
-import TheServicos from '../components/Servicos/TheServicos.vue';
+
 
 
 const PROJECTS_QUERY = gql`
