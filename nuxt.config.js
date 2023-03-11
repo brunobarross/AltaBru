@@ -75,8 +75,15 @@ export default {
       path:'~/components/Sobre/', extensions :['vue']
     },
     {
-      path:'~/components/Ui/', extensions :['vue']
+      path:'~/components/UI/', extensions :['vue']
     },
+    {
+      path:'~/components/Contato/', extensions :['vue']
+    },
+    {
+      path:'~/components/Servicos/', extensions :['vue']
+    },
+
 
 
 
