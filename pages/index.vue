@@ -64,16 +64,6 @@ query PROJECTS_QUERY {
 `
 
 export default {
-  components:{
-    TheProjects,
-    TheBanner,
-    TheHabilidades,
-    TheSection,
-    TheSobre,
-    TheExperiencias,
-    TheContato,
-    TheServicos
-},
   async asyncData({ app, params }) {
     const client = app.apolloProvider.defaultClient;
 
