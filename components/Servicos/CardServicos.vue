@@ -11,7 +11,6 @@
 import { computed } from 'vue';
 const props = defineProps(['servico', 'icone_servicos'])
 
-console.log(props.icone_servicos)
 
 const icone = computed(() => {
   return require(`~/assets/img/icons/${props.icone_servicos}`)

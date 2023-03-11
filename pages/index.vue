@@ -72,8 +72,6 @@ export default {
     })
 
     const { projetos} = await res.data;
-    console.log(projetos)
-
     return {
       projetos,
     }

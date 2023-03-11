@@ -114,9 +114,8 @@ export default {
         slug,
       }
     })
-    console.log(res.data)
     const { projeto} = await res.data;
-    console.log(projeto)
+
 
     return {
       projeto,

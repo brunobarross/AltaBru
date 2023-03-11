@@ -50,7 +50,6 @@ async function envioFormulario() {
       body: JSON.stringify({ nome: nome.value, email: email.value, telefone: telefone.value, mensagem: mensagem.value })
     })
     const data = await response.json()
-    console.log(data)
     texto.value = 'Mensagem enviada com sucesso, logo entrarei em contato com você!'
     limparFormulario();
     isSucess.value = true
