@@ -29,4 +29,9 @@ h2::after {
 h2.inverse {
   text-align: center !important;
 }
+
+
+h2.inverse::after {
+  margin: .25rem auto 0 auto;
+}
 </style>

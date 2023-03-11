@@ -3,21 +3,24 @@
     <div class="container-personalizado">
       <div class="flex items-center justify-between">
         <div class="logo z-50">
-          <nuxt-link to="/" class="text-2xl font-semibold">Altamiro<span class="text-white">.code</span></nuxt-link>
+          <nuxt-link to="/" class="text-2xl font-bold font-poppins text-white block">Alta<span class="text-primary-pure">Bru</span></nuxt-link>
         </div>
         <span id="hamburger" class="z-50 lg:hidden"></span>
-        <div class="menu " >
+        <div class="menu ">
           <ul class="flex  items-center flex-col lg:flex-row lg:justify-start justify-center" v-if="route.name !== 'projetos-slug'">
-            <li class="link-item text-2xl lg:text-base transition-all" v-for="link in links" @click="(e) => handleClick(e)">
+            <li class="link-item text-white text-2xl lg:text-base transition-all cursor-pointer" v-for="link in links" @click="(e) => handleClick(e)">
               <a :href="link.anchor" :class="{ isActive: link.isActive }">{{ link.nome }}</a>
             </li>
           </ul>
+
           <ul class="flex md:flex-row flex-col items-center lg:justify-start justify-center lg:mt-0 mt-8" v-else>
-            <nuxt-link class="link-item text-2xl lg:text-base transition-all" to="/">Voltar para home</nuxt-link>
+            <nuxt-link class="link-item text-white text-2xl lg:text-base transition-all inline-flex items-center " to="/">
+              <svg class="w-5 h-5 mr-1 transition-all " style="">
+                <use xlink:href="@/assets/icons/icons.svg#icon-arrow"></use>
+              </svg>
+              Voltar para home</nuxt-link>
           </ul>
         </div>
-
-
       </div>
     </div>
   </header>
@@ -37,6 +40,11 @@ const links = ref([
     isActive: false,
   },
   {
+    nome: 'Serviços',
+    anchor: '#servicos',
+    isActive: false,
+  },
+  {
     nome: 'Projetos',
     anchor: '#projetos',
     isActive: false,
@@ -44,6 +52,11 @@ const links = ref([
   {
     nome: 'Habilidades',
     anchor: '#habilidades',
+    isActive: false,
+  },
+  {
+    nome: 'Contato',
+    anchor: '#contato',
     isActive: false,
   }
 ])
@@ -62,32 +75,29 @@ function handleClick({ currentTarget }) {
     }
   })
 }
-function toggleNavFunction () {
+function toggleNavFunction() {
   showMenu.value = !showMenu.value;
 }
 
 </script>
 
 <style scoped>
+
+
 .link-item:hover {
   color: #0192E4;
+  --color1:#0192E4;
 }
+
+.link-item:hover svg{
+  transform: translateX(-4px);
+}
+
 
 header {
   background-color: #1D2224;
   z-index: 1000;
 }
-
-.logo a {
-  display: block;
-  color: #0192e4;
-}
-
-.link-item {
-  cursor: pointer;
-}
-
-
 
 .link-item+.link-item {
   margin-left: 1rem;
@@ -122,46 +132,42 @@ header {
   }
 
   #hamburger {
-  display: block;
-  border-top: 2px solid #fff;
-  width: 24px;
-}
+    display: block;
+    border-top: 2px solid #fff;
+    width: 24px;
+  }
 
 
-#hamburger::before,
-#hamburger::after {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 2px;
-  background-color: currentColor;
-  margin-top: 5px;
-  transition: .3s;
-  position: relative;
-}
+  #hamburger::before,
+  #hamburger::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: currentColor;
+    margin-top: 5px;
+    transition: .3s;
+    position: relative;
+  }
 
-header.active #hamburger {
-  border-top-color: transparent;
-  color: #fff;
-}
+  header.active #hamburger {
+    border-top-color: transparent;
+    color: #fff;
+  }
 
 
-header.active #hambuerger::before {
-  transform: rotate(135deg);
-}
+  header.active #hambuerger::before {
+    transform: rotate(135deg);
+  }
 
-header.active #hambuerger::after {
-  transform: rotate(-135deg);
-  top: -7px;
-}
+  header.active #hambuerger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
 
 }
 
 /* .isActive{
   color: #0192E4;
 } */
-
-
-
-
 </style>

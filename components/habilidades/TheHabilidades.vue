@@ -6,7 +6,7 @@
 
 <script setup>
 import TheCardHabilidade from "./TheCardHabilidade.vue";
-import logoBootstrap from "../../assets/img/logos/bootstrap.svg";
+
 
 const habilidades = [
   {

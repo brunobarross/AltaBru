@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    font-family: "Poppins", sans-serif;
+    @apply font-poppins;
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
@@ -55,7 +55,19 @@
     }
 
   .btn {
-    @apply border border-transparent py-2 px-4 min-w-[12.5rem] inline-flex items-center justify-center relative h-12 font-medium transition-all rounded-md text-base;
+    @apply border border-transparent inline-flex items-center justify-center relative h-12 font-medium transition-all rounded-md ;
+  }
+
+  .btn.sm{
+    @apply h-10 text-sm p-3;
+  }
+
+  .btn.md{
+    @apply h-12 text-sm p-[.875rem];
+  }
+
+  .btn.lg{
+    @apply h-14 text-base py-5 px-4;
   }
 
   .btn.primary {
@@ -65,6 +77,7 @@
   .btn.secondary {
     @apply text-neutral-200 hover:bg-primary-pure bg-transparent border-primary-pure hover:border-primary-pure;
   }
+
 
   .active{
     @apply bg-primary-pure text-neutral-200;

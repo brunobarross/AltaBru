@@ -8,6 +8,10 @@ module.exports = {
     "./nuxt.config.{js,ts}",
   ],
   theme: {
+    fontFamily: {
+      'poppins': ['Poppins'],
+      'volkorn': ['Vollkorn'],
+    },
     extend: {
       colors:{
         'neutral-black': '#111111',

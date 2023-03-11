@@ -1,5 +1,5 @@
 <template>
-  <div class="card-projeto overflow-hidden relative md:items-start h-[15.625rem] md:h-[18.75rem] border-2 rounded-md border-neutral-600 p-2">
+  <div class="card-projeto overflow-hidden relative md:items-start h-[15.625rem] md:h-[18.75rem] rounded-md">
     <div class="img overflow-hidden rounded-md relative w-full h-full">
       <img
         :src="projeto.banner.url"
@@ -9,16 +9,12 @@
     <div
       class="detail py-6 px-4 absolute top-0 left-0 flex flex-col justify-center  w-full h-full transition-all"
     >
-      <div class="title flex flex-col text-center">
-        <h3 class=" text-2xl mt-2 font-semibold">{{ projeto.nome }}</h3>
 
+        <h3 class=" text-2xl mt-2 font-semibold text-center">{{ projeto.nome }}</h3>
+      <div class="btn-container flex mt-4 justify-center">
+
+        <nuxt-link :to="`projetos/${projeto.slug}`" class="btn primary sm">Ver detalhes</nuxt-link>
       </div>
-
-      <div class="btn-container flex mt-6 justify-center">
-        <nuxt-link :to="`projetos/${projeto.slug}`"><TheButton text="Ver mais" /></nuxt-link>
-
-      </div>
-
     </div>
   </div>
 
@@ -34,6 +30,9 @@ const props = defineProps(['projeto'])
     opacity: 0;
   }
 
+  .card-projeto {
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  }
 
 
   .card-projeto .img::after {
@@ -48,8 +47,8 @@ const props = defineProps(['projeto'])
   }
 
   .card-projeto:hover .img::after {
-    background:  #0192E4;
-    opacity: 0.7;
+    background-color: #30373B;
+    opacity: 0.9;
 
 
   }

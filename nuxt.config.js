@@ -1,3 +1,5 @@
+const path = require('path')
+
 export default {
 
   ssr: false,
@@ -23,7 +25,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Vollkorn:wght@700&display=swap",
       },
     ]
   },
@@ -80,6 +82,28 @@ export default {
 
   ],
 
+  svg: {
+    vueSvgLoader: {
+        // vue-svg-loader options
+    },
+    svgSpriteLoader: {
+        // svg-sprite-loader options
+        extend(config, ctx) {
+          config.module.rules.push({
+            test: /\.svg$/,
+            loader: 'svg-sprite-loader',
+            include: [path.resolve(__dirname, 'assets/icons')],
+            options: {
+              symbolId: 'icon-[name]'
+            }
+          })
+        }
+    },
+    fileLoader: {
+        // file-loader options
+    }
+},
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
@@ -107,5 +131,9 @@ export default {
         autoprefixer: {},
       },
     },
+
+
   }
 }
+
+
