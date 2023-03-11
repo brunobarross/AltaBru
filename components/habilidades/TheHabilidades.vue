@@ -1,5 +1,5 @@
 <template>
-  <div class="grid  grid-habilidades mt-8 md:mt-12">
+  <div class="grid  grid-habilidades mt-10 md:mt-12">
     <TheCardHabilidade v-for="habilidade in habilidades" v-if="habilidades" :key="habilidade.id" :logo_tecnologia="habilidade.logo_tecnologia" :nome_tecnologia="habilidade.nome_tecnologia" data-aos="zoom-in" data-aos-delay="200"></TheCardHabilidade>
   </div>
 </template>

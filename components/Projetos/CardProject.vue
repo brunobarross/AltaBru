@@ -2,7 +2,7 @@
   <div class="card-projeto overflow-hidden relative md:items-start h-[15.625rem] md:h-[18.75rem] rounded-md">
     <div class="img overflow-hidden rounded-md relative w-full h-full">
       <img
-        :src="projeto.banner.url"
+        :src="projeto.banner?.url"
         class="md:bg-cover h-full w-full"
       />
     </div>

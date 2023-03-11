@@ -17,7 +17,7 @@
             </div>
 
           </div>
-          <div class="flex flex-col w-full">
+          <div class="flex flex-col w-full lg:w-auto">
 
             <div class="botoes flex md:flex-row flex-col items-center lg:mt-0 mt-8 lg:justify-end justify-center" data-aos="fade-left" data-aos-delay="150">
               <a :href="projeto.deploy" target="_blank" class="btn secondary md w-full md:w-auto">

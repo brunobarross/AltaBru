@@ -27,7 +27,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref,watch } from 'vue';
 import { useRoute } from '@nuxtjs/composition-api';
 const route = useRoute()
 
@@ -78,6 +78,18 @@ const isMobile = ref(false);
 function toggleNavFunction() {
   showMenu.value = !showMenu.value;
 }
+
+watch(
+  () => showMenu.value,
+  (menu) => {
+    if(menu === true){
+      document.documentElement.style.overflowY = "hidden";
+    } else {
+      document.documentElement.style.overflowY = "auto";
+    }
+  }
+)
+
 
 </script>
 

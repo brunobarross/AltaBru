@@ -1,4 +1,6 @@
+require('dotenv').config()
 const path = require('path')
+
 
 export default {
 
@@ -25,8 +27,12 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Vollkorn:wght@700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap",
       },
+      {
+        rel: 'stylesheet',
+        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap",
+      }
     ]
   },
 
@@ -52,6 +58,11 @@ export default {
   css: [
   '@/assets/css/tailwind.css'
   ],
+  env:{
+    apiURL: process.env.API_URL,
+    formURL: process.env.FORM_URL,
+    baseURL: process.env.baseURL || 'http://localhost:3000/'
+  },
 
   router: {
     base: '/',
@@ -132,7 +143,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://api-sa-east-1.hygraph.com/v2/cl5y0mddm2bxo01t3d8a2drck/master'
+        httpEndpoint: process.env.API_URL
       }
     },
   },

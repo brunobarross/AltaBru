@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-neutral-700 py-4 mt-32">
+  <footer class="bg-neutral-700 py-4 mt-16 md:mt-32">
     <div class="container-personalizado">
       <div class="flex justify-center">
         <div class="copy">

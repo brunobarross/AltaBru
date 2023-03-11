@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-[450px] mt-8 md:mt-12" data-aos="zoom-in" data-aos-delay="250">
+  <div class="mx-auto max-w-[450px] mt-10 md:mt-12" data-aos="zoom-in" data-aos-delay="250">
     <form method="POST" target="_blank" @submit.prevent="envioFormulario">
       <div class="input-box">
         <input class="border-b border-neutral-600 bg-transparent px-2 py-2 w-full outline-none focus:border-primary-pure transition-all " name="nome" type="text" placeholder="Seu nome" required v-model="nome" />
@@ -26,6 +26,8 @@
 import { vMaska } from "maska"
 import { ref } from 'vue';
 
+
+
 const nome = ref('')
 const email = ref('')
 const telefone = ref('')
@@ -42,7 +44,7 @@ function limparFormulario(){
 
 async function envioFormulario() {
   try {
-    const response = await fetch('https://formsubmit.co/ajax/altamiro_bruno@yahoo.com.br', {
+    const response = await fetch(process.env.formURL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nome: nome.value, email: email.value, telefone: telefone.value, mensagem: mensagem.value })
