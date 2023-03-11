@@ -143,7 +143,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.API_URL
+        httpEndpoint: 'https://sa-east-1.cdn.hygraph.com/content/cl5y0mddm2bxo01t3d8a2drck/master'
       }
     },
   },
