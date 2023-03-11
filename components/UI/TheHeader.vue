@@ -1,20 +1,20 @@
 <template>
-  <header class="py-6 h-16 fixed top-0 w-full flex items-center">
+  <header class="py-6 h-16 fixed top-0 w-full flex items-center" :class="showMenu ? 'active' : ''">
     <div class="container-personalizado">
       <div class="flex items-center justify-between">
         <div class="logo z-50">
           <nuxt-link to="/" class="text-2xl font-bold font-poppins text-white block">Alta<span class="text-primary-pure">Bru</span></nuxt-link>
         </div>
-        <span id="hamburger" class="z-50 lg:hidden"></span>
-        <div class="menu ">
+        <span id="hamburger" class="z-50 lg:hidden"  @click="toggleNavFunction"></span>
+        <div class="menu" >
           <ul class="flex  items-center flex-col lg:flex-row lg:justify-start justify-center" v-if="route.name !== 'projetos-slug'">
-            <li class="link-item text-white text-2xl lg:text-base transition-all cursor-pointer" v-for="link in links" @click="(e) => handleClick(e)">
-              <a :href="link.anchor" :class="{ isActive: link.isActive }">{{ link.nome }}</a>
+            <li class="link-item text-white text-2xl lg:text-base transition-all cursor-pointer" v-for="link in links"@click="showMenu = !showMenu" >
+              <a :href="link.anchor" :class="{ isActive: link.isActive }" >{{ link.nome }}</a>
             </li>
           </ul>
 
           <ul class="flex md:flex-row flex-col items-center lg:justify-start justify-center lg:mt-0 mt-8" v-else>
-            <nuxt-link class="link-item text-white text-2xl lg:text-base transition-all inline-flex items-center " to="/">
+            <nuxt-link class="link-item text-white text-2xl lg:text-base transition-all inline-flex items-center " to="/" @click="showMenu = !showMenu">
               <svg class="w-5 h-5 mr-1 transition-all " style="">
                 <use xlink:href="@/assets/icons/icons.svg#icon-arrow"></use>
               </svg>
@@ -65,16 +65,16 @@ const showMenu = ref(false);
 
 const isMobile = ref(false);
 
-function handleClick({ currentTarget }) {
-  links.value.forEach((i) => {
-    if (i.nome === currentTarget.textContent) {
-      i.isActive = true;
-    } else {
-      i.isActive = false;
+// function handleClick({ currentTarget }) {
+//   links.value.forEach((i) => {
+//     if (i.nome === currentTarget.textContent) {
+//       i.isActive = true;
+//     } else {
+//       i.isActive = false;
 
-    }
-  })
-}
+//     }
+//   })
+// }
 function toggleNavFunction() {
   showMenu.value = !showMenu.value;
 }
@@ -120,11 +120,14 @@ header {
     left: 0;
     min-height: 100vh;
     background-color: #1D2224;
-    display: none;
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 11;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: .3s ease;
   }
 
   .menu ul {
@@ -156,13 +159,18 @@ header {
   }
 
 
-  header.active #hambuerger::before {
+  header.active #hamburger::before {
     transform: rotate(135deg);
   }
 
-  header.active #hambuerger::after {
+  header.active #hamburger::after {
     transform: rotate(-135deg);
     top: -7px;
+  }
+
+  header.active .menu {
+    opacity: 1;
+    transform: translateX(0) !important;
   }
 
 }
