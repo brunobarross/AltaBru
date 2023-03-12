@@ -5,17 +5,17 @@
         <div class="banner-wrapper w-full h-full flex flex-col  justify-center">
           <div class="mt-12 mr-0 lg:mr-10">
             <!-- <span class="intro-tag block text-base font-medium  text-primary-pure">&lt; Hello World /&gt;</span> -->
-            <span class="intro-tag block md:text-lg font-medium  text-primary-pure mb-2 lg:mb-6" data-aos="fade-up" data-aos-delay="100">Olá, eu sou o</span>
-            <h1 class="titulo font-semibold text-neutral-100" data-aos="fade-up" data-aos-delay="150">
+            <span class="intro-tag block md:text-lg font-medium font-montserrat  text-primary-pure mb-2 lg:mb-6" data-aos="fade-up" data-aos-delay="100">Olá, eu sou o</span>
+            <h1 class="titulo font-semibold text-neutral-100 font-montserrat" data-aos="fade-up" data-aos-delay="150">
               Altamiro <span class="text-primary-pure">Bruno.</span>
             </h1>
-            <h3 class="subtitulo font-semibold text-neutral-300 mt-2 md:mt-0" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="subtitulo font-semibold text-neutral-300 mt-2 md:mt-0 font-montserrat" data-aos="fade-up" data-aos-delay="200">
               Desenvolvo sites e aplicações para a Web.
             </h3>
-            <p class="text-sm md:text-base  mt-5 max-w-full lg:max-w-[650px] leading-[180%] text-neutral-300 " data-aos="fade-up" data-aos-delay="250">
-              Sou um Desenvolvedor <span class="text-primary-pure">Front-end</span> especializado em criar experiências digitais excepcionais. Atualmente, estou focado em criar produtos acessíveis e inovadores que poderão um dia facilitar a vida de muitas pessoas.
+            <p class="text-sm md:text-base  mt-5 max-w-full lg:max-w-[650px] leading-[180%] text-neutral-300 font-vollkorn " data-aos="fade-up" data-aos-delay="250">
+              Sou um Desenvolvedor <span class="text-primary-pure font">Front-end</span> especializado em criar experiências digitais excepcionais. Atualmente, estou focado em criar produtos acessíveis e inovadores que poderão um dia facilitar a vida de muitas pessoas.
             </p>
-            <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
+            <!-- <div class="mt-8" data-aos="fade-up" data-aos-delay="300">
               <a href="/altamiro-curriculo.pdf" download class="btn primary lg w-full md:w-auto">
                 Baixar CV
 
@@ -23,7 +23,7 @@
                   <use xlink:href="@/assets/icons/icons.svg#icon-cloud"></use>
                 </svg>
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="social flex justify-center md:justify-start lg:justify-center lg:flex-col lg:absolute right-0 mt-6 lg:mt-0" data-aos="fade-left" data-aos-delay="350">

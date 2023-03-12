@@ -21,21 +21,25 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap",
-      },
-      {
-        rel: 'stylesheet',
-        href: "https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap",
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+
+
   },
 
+  loading:{
+    color: '#0192E4',
+    height: '3px'
+  },
+  googleFonts: {
+    download: true,
+    families: {
+      Poppins: true,
+      'Open+Sans': [400, 700],
+      Montserrat: true,
+
+    }
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   "builds": [
     {

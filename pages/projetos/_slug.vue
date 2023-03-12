@@ -12,7 +12,7 @@
               <img :src="projeto.miniatura.url" class="object-cover object-center h-full w-full " />
             </div>
             <div class="titulo mt-4 ml-0 md:ml-4 lg:mt-0" data-aos="fade-left" data-aos-delay="150">
-              <h3 class="font-semibold">{{ projeto.nome }}</h3>
+              <h3 class="font-semibold font-poppins">{{ projeto.nome }}</h3>
               <p class="font-medium text-primary-pure text-center md:text-left">{{ projeto.tipo }}</p>
             </div>
 

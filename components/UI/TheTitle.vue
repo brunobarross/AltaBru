@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2 class="text-[2rem] md:text-[2.5rem] font-semibold text-neutral-100" :class="{ inverse: inverse }" data-aos="fade-up" data-aos-delay="100">{{ text }}</h2>
+    <h2 class="text-[2rem] md:text-[2.5rem] font-bold text-neutral-100 font-poppins" :class="{ inverse: inverse }" data-aos="fade-up" data-aos-delay="100">{{ text }}</h2>
     <slot></slot>
   </div>
 </template>

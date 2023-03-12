@@ -4,16 +4,19 @@
 
 @layer base {
   html {
-    @apply font-poppins;
+    /* @apply font-poppins; */
     scroll-behavior: smooth;
     overflow-x: hidden;
   }
 
   body {
+    @apply font-open_sans;
     @apply text-neutral-200;
     background-color: #1d2224;
     overflow-x: hidden;
   }
+
+
 }
 
 @layer components {

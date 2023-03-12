@@ -9,8 +9,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'poppins': ['Poppins'],
-      'volkorn': ['Vollkorn'],
+      'poppins': ['Poppins', 'sans-serif'],
+      'montserrat': ['Montserrat'],
+      'open_sans': ['Open Sans', 'sans-serif']
     },
     extend: {
       colors:{
