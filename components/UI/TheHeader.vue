@@ -3,12 +3,12 @@
     <div class="container-personalizado">
       <div class="flex items-center justify-between">
         <div class="logo z-50">
-          <nuxt-link to="/" class="text-2xl font-bold font-montserrat text-white block">Alta<span class="text-primary-pure">Bru</span></nuxt-link>
+          <nuxt-link to="/" class="text-2xl font-bold font-montserrat text-white block">Alta<span class="text-primary-pure" @click="showMenu = !showMenu">Bru</span></nuxt-link>
         </div>
         <span id="hamburger" class="z-50 lg:hidden"  @click="toggleNavFunction"></span>
         <div class="menu" >
           <ul class="flex  items-center flex-col lg:flex-row lg:justify-start justify-center" v-if="route.name !== 'projetos-slug'">
-            <li class="link-item text-white text-2xl lg:text-base transition-all cursor-pointer" v-for="link in links"@click="showMenu = !showMenu" >
+            <li class="link-item text-white text-2xl lg:text-base transition-all cursor-pointer" v-for="link in links" @click="showMenu = !showMenu" >
               <a :href="link.anchor" :class="{ isActive: link.isActive }" >{{ link.nome }}</a>
             </li>
           </ul>
