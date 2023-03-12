@@ -3,7 +3,7 @@
     <div class="container-personalizado">
       <div class="flex items-center justify-between">
         <div class="logo z-50">
-          <nuxt-link to="/" class="text-2xl font-bold font-montserrat text-white block">Alta<span class="text-primary-pure" @click="showMenu = !showMenu">Bru</span></nuxt-link>
+          <nuxt-link to="/" class="text-2xl font-bold font-montserrat text-white block">Alta<span class="text-primary-pure" >Bru</span></nuxt-link>
         </div>
         <span id="hamburger" class="z-50 lg:hidden"  @click="toggleNavFunction"></span>
         <div class="menu" >
