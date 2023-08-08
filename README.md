@@ -2,7 +2,7 @@
 
 # Portfólio Nuxt.js
 
-O Games4Free é uma plataforma desenvolvida com Next.js que oferece uma experiência única para os entusiastas de jogos, reunindo informações sobre jogos e DLCs gratuitos disponíveis em diversas plataformas populares, como Steam, Epic Games Store, PlayStation Store e Microsoft Store. Com uma interface intuitiva e moderna, o Games4Free facilita a descoberta e acesso a ofertas imperdíveis.
+Explore meu portfólio e mergulhe na versatilidade do meu trabalho como desenvolvedor JavaScript. Com proficiência em Vue.js, React.js e a utilização expert de frameworks como Nuxt.js, Next.js e Quasar, eu crio experiências web de alto desempenho e interfaces elegantes.
 
 
 ## Índice
