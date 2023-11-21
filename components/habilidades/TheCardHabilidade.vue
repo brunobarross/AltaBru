@@ -1,5 +1,5 @@
 <template>
-  <div class="card-habilidade flex flex-col items-center justify-center transition-all lg:contrast-75 lg:hover:contrast-100 cursor-pointer">
+  <div class="card-habilidade flex flex-col items-center justify-center transition-all lg:contrast-75 lg:hover:contrast-100 cursor-pointer ">
     <div class="img max-w-[56px] md:max-w-[64px]">
       <img
         :src="logo"

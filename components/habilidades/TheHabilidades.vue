@@ -83,10 +83,12 @@ const habilidades = [
 
 <style scoped>
 .grid-habilidades {
-  grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
+  grid-template-columns: repeat(auto-fit, minmax(64px, max-content));
   column-gap: 2rem;
   row-gap: 4rem;
   justify-content: center;
+  display: grid;
+
 }
 
 @media(max-width: 640px) {
