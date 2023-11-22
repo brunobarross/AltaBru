@@ -1,7 +1,10 @@
 <template>
   <div class="mt-8 md:mt-12">
     <div class="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6" >
-      <CardServicos v-for="servico in servicos" v-if="servicos.length" :key="servico.id" :servico="servico" :icone_servicos="servico.icon" data-aos="zoom-in" data-aos-delay="200" />
+      <CardServicos v-for="(servico, index) in servicos" v-if="servicos.length" :key="servico.id" :servico="servico" :icone_servicos="servico.icon" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     :data-aos-delay="index * 100"
+     data-aos-offset="0"/>
 
     </div>
   </div>

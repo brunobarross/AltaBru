@@ -37,9 +37,6 @@
 
 <script>
 import gql from 'graphql-tag';
-
-
-
 const PROJECTS_QUERY = gql`
 query PROJECTS_QUERY {
   projetos {

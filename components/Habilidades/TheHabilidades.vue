@@ -1,6 +1,9 @@
 <template>
   <div class="grid  grid-habilidades mt-10 md:mt-12">
-    <TheCardHabilidade v-for="habilidade in habilidades" v-if="habilidades" :key="habilidade.id" :logo_tecnologia="habilidade.logo_tecnologia" :nome_tecnologia="habilidade.nome_tecnologia" data-aos="zoom-in" data-aos-delay="200"></TheCardHabilidade>
+    <TheCardHabilidade v-for="(habilidade, index) in habilidades" v-if="habilidades" :key="habilidade.id" :logo_tecnologia="habilidade.logo_tecnologia" :nome_tecnologia="habilidade.nome_tecnologia" data-aos="fade-zoom-in"
+     data-aos-easing="ease-in-back"
+     :data-aos-delay="index * 100"
+     data-aos-offset="0"></TheCardHabilidade>
   </div>
 </template>
 
